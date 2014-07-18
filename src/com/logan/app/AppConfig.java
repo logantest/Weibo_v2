@@ -35,6 +35,11 @@ import com.logan.util.StringUtils;
  */
 public class AppConfig{
 	
+	public String getServerHost() {
+        String s = server.substring(server.indexOf("://") + 3);
+        return s.substring(0, s.indexOf('/'));
+    	}
+    
 	private final static String APP_CONFIG = "config";
 	
 	public final static String TEMP_TWEET = "temp_tweet";
